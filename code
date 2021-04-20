@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+string remove(string a){
+	//removing spaces
+	a.erase(remove(a.begin(), a.end(), ' '), a.end());
+	return a;
+}
+int main(){
+	//initializing values
+	int len;
+	char let;
+	string ui;
+	
+	//giving values to our values
+	getline(cin, ui);
+	ui = remove(ui);
+	
+	//take lengt of inputed string
+	len = ui.length();
+	
+	//initialize array
+	char list[len++];
+	
+	//making string to array
+	strcpy(list, ui.c_str());
+	while(true){
+		for(int i; i < len; i++){
+		//taking value from array
+		let = list[i];
+		//coding and outputing coded letters
+		cout<<int(let)<<endl;
+		}
+	}
+
+}
